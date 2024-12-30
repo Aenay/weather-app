@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #4682B4);
+    color: #fff;
+}
+
+.search {
+    margin-bottom: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+}
+
+.search input {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+}
+
+.search button {
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.search button:hover {
+    background: #e8d988;
+    color: #333;
+}
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+.weather-icon {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.temperature {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.condition {
+    font-size: 24px;
+    color: #F0E68C;
+    margin-bottom: 20px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    box-sizing: 50px 24px;
+    color: #FFD700;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.details span {
+    font-weight: bold;
+    color: #FFFAF0;
+}
+
+.weather-container p {
+    margin: 5px 0;
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #f0f8ff;
+}
+
+.bold {
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+}
+
+.details-decoration {
+    margin-top: 20px;
+}
+
+.side {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+}
+
+.weather-container {
+    display: none;
+}
+
+.error {
+    margin-top: 4px;
+    font-size: 12px;
+    margin-right: 200px;
+    color: red;
+    display: none;
+}
