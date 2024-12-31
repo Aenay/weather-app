@@ -5,7 +5,7 @@ const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weather-icon");
 
-// Function to fetch weather data based on coordinates
+
 async function fetchWeatherByCoordinates(lat, lon) {
     try {
         const response = await fetch(`${apiUrl}&lat=${lat}&lon=${lon}&appid=${apiKey}`);
@@ -16,7 +16,7 @@ async function fetchWeatherByCoordinates(lat, lon) {
     }
 }
 
-// Function to fetch weather data based on city name
+
 async function fetchWeatherByCity(city) {
     try {
         const response = await fetch(`${apiUrl}&q=${city}&appid=${apiKey}`);
@@ -32,7 +32,6 @@ async function fetchWeatherByCity(city) {
     }
 }
 
-// Function to update the UI with weather data
 function updateWeatherUI(data) {
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temperature").innerHTML = Math.round(data.main.temp) + "°C";
@@ -56,7 +55,6 @@ function updateWeatherUI(data) {
     document.querySelector(".error").style.display = "none";
 }
 
-// Function to get user's current location
 function getUserLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
@@ -74,7 +72,6 @@ function getUserLocation() {
     }
 }
 
-// Event listener for search button
 searchBtn.addEventListener("click", () => {
     const city = searchBox.value;
     if (city) {
@@ -84,5 +81,4 @@ searchBtn.addEventListener("click", () => {
     }
 });
 
-// Fetch weather for user's location on page load
 window.addEventListener("load", getUserLocation);
